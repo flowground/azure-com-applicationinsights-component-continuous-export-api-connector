@@ -1,0 +1,63 @@
+{
+    "type": "object",
+    "properties": {
+        "resourceGroupName": {
+            "required": true,
+            "type": "string"
+        },
+        "subscriptionId": {
+            "required": true,
+            "type": "string"
+        },
+        "resourceName": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "An Application Insights component Continuous Export configuration request definition.",
+            "properties": {
+                "DestinationAccountId": {
+                    "description": "The name of destination storage account.",
+                    "type": "string"
+                },
+                "DestinationAddress": {
+                    "description": "The SAS URL for the destination storage container. It must grant write permission.",
+                    "type": "string"
+                },
+                "DestinationStorageLocationId": {
+                    "description": "The location ID of the destination storage container.",
+                    "type": "string"
+                },
+                "DestinationStorageSubscriptionId": {
+                    "description": "The subscription ID of the destination storage container.",
+                    "type": "string"
+                },
+                "DestinationType": {
+                    "description": "The Continuous Export destination type. This has to be 'Blob'.",
+                    "type": "string"
+                },
+                "IsEnabled": {
+                    "description": "Set to 'true' to create a Continuous Export configuration as enabled, otherwise set it to 'false'.",
+                    "type": "string"
+                },
+                "NotificationQueueEnabled": {
+                    "description": "Deprecated",
+                    "type": "string"
+                },
+                "NotificationQueueUri": {
+                    "description": "Deprecated",
+                    "type": "string"
+                },
+                "RecordTypes": {
+                    "description": "The document types to be exported, as comma separated values. Allowed values include 'Requests', 'Event', 'Exceptions', 'Metrics', 'PageViews', 'PageViewPerformance', 'Rdd', 'PerformanceCounters', 'Availability', 'Messages'.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
